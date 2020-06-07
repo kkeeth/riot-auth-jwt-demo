@@ -2,10 +2,23 @@
   <div class="app-header">
     <img src="https://riot.js.org/img/logo/riot-logo.svg" alt="riot logo" class="logo">
   </div>
-  <h1>{ props.title }</h1>
+  <div class="container">
+    <router base={ base }>
+      <Home if={ false } />
+      <Login />
+    </router>
+  </div>
 
   <script>
+    import Home from './pages/home.riot'
+    import Login from './pages/login.riot'
+
     export default {
+      components: {
+        Home,
+        Login
+      },
+      base: window.location.origin,
       onBeforeMount(props, state) {
         // any processing
       }

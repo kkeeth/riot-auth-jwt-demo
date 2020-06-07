@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "ssh://git@github.com/kkeeth/riot-auth-jwt-demo.git",
-  "author": "kkeeth <zensin0082@gmail.com>",
-  "license": "MIT",
-  "keywords": ["riotjs", "jwt", "auth"],
   "author": {
     "name": "kkeeth",
     "email": "<zensin0082@gmail.com>"
   },
+  "license": "MIT",
+  "keywords": [
+    "riotjs",
+    "jwt",
+    "auth"
+  ],
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html --out-dir=dist"
@@ -20,6 +23,9 @@
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
-    "riot": "^4.13.1"
+    "@riotjs/route": "^5.3.2",
+    "js-cookie": "^2.2.1",
+    "riot": "^4.13.1",
+    "riot-stx": "https://github.com/klicat/riot-stx.git"
   }
 }
