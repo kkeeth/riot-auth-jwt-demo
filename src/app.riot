@@ -4,19 +4,42 @@
   </div>
   <div class="container">
     <router base={ base }>
-      <Home if={ false } />
-      <Login />
+      <route path="/">
+        <div if={ false }>
+          <p>
+            You are authenticated. You can see the
+            <a href="/secret">
+              secret page
+            </a>!
+          </p>
+          <button @click="logout">
+            Logout
+          </button>
+        </div>
+        <p if={ true }>
+          Please
+          <a href="/login">
+            login
+          </a>.
+        </p>
+      </route>
+      <route path="/secret">
+        <Secret />
+      </route>
+      <route path="/login">
+        <Login />
+      </route>
     </router>
   </div>
 
   <script>
-    import Home from './pages/home.riot'
     import Login from './pages/login.riot'
+    import Secret from './pages/secret.riot'
 
     export default {
       components: {
-        Home,
-        Login
+        Login,
+        Secret
       },
       base: window.location.origin,
       onBeforeMount(props, state) {

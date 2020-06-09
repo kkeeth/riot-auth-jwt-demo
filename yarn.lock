@@ -4565,9 +4565,9 @@ rimraf@^2.6.2:
   dependencies:
     glob "^7.1.3"
 
-"riot-stx@https://github.com/klicat/riot-stx.git":
+"riot-stx@https://github.com/kkeeth/riot-stx.git":
   version "1.0.1"
-  resolved "https://github.com/klicat/riot-stx.git#f38d82fe94c608ed4a05a749682f4022a9878682"
+  resolved "https://github.com/kkeeth/riot-stx.git#26ead8b752b250ae77a19367d0d3d4e5089105ec"
 
 riot@^4.13.1:
   version "4.13.1"

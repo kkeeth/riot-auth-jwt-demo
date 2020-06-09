@@ -26,6 +26,6 @@
     "@riotjs/route": "^5.3.2",
     "js-cookie": "^2.2.1",
     "riot": "^4.13.1",
-    "riot-stx": "https://github.com/klicat/riot-stx.git"
+    "riot-stx": "https://github.com/kkeeth/riot-stx.git"
   }
 }
