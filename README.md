@@ -1,2 +1,3 @@
 # riot-auth-jwt-demo
-the demo of authentication with riotjs and jwt
+
+The demo of authentication with riotjs and jwt, inspired by the demo of Nuxt.js.

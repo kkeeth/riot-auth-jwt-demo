@@ -17,10 +17,11 @@
 
   <script>
     import Cookie from 'js-cookie'
+    import auth from '../../libs/authenticated'
 
     export default {
       onBeforeMount() {
-        Cookie.get('auth') && router.push('/')
+        auth(this.router)
       },
       postLogin() {
         setTimeout(() => {
