@@ -5,18 +5,18 @@
   <div class="container">
     <router base={ base }>
       <route path="/">
-        <div if={ false }>
+        <div if={ isAuth }>
           <p>
             You are authenticated. You can see the
             <a href="/secret">
               secret page
             </a>!
           </p>
-          <button @click="logout">
+          <button onclick={ logout }>
             Logout
           </button>
         </div>
-        <p if={ true }>
+        <p if={ !isAuth }>
           Please
           <a href="/login">
             login
@@ -33,6 +33,7 @@
   </div>
 
   <script>
+    import Cookie from 'js-cookie'
     import Login from './pages/login.riot'
     import Secret from './pages/secret.riot'
 
@@ -43,7 +44,17 @@
       },
       base: window.location.origin,
       onBeforeMount(props, state) {
-        // any processing
+        this.router.on.value(path => {
+          if (path === '/') {
+            this.isAuth = Cookie.get('auth')
+          }
+        })
+        console.log(this.isAuth)
+      },
+      logout () {
+        Cookie.remove('auth')
+        this.router.push('/login')
+        // clear store(set null)
       }
     }
   </script>

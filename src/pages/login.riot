@@ -8,7 +8,7 @@
       <label for="password">
         <input id="password" type="password" value="test">
       </label>
-      <button onClick="postLogin">
+      <button onclick={ postLogin }>
         login
       </button>
       <p>The credentials are not verified for the example purpose.</p>
@@ -16,12 +16,21 @@
   </div>
 
   <script>
+    import Cookie from 'js-cookie'
+
     export default {
       onBeforeMount() {
-        
+        Cookie.get('auth') && router.push('/')
       },
       postLogin() {
-
+        setTimeout(() => {
+          const auth = {
+            accessToken: 'someStringGotFromApiServiceWithAjax'
+          }
+          Cookie.set('auth', auth)
+          // TODO: using store library
+          this.router.push('/')
+        }, 1000)
       }
     }
   </script>
