@@ -7,11 +7,11 @@ import App from './app.riot'
 register('router', Router)
 register('route', Route)
 
-install(component => {
+install((component) => {
   component.router = router
   return component
 })
 
 component(App)(document.getElementById('app'), {
-  title: 'Hello Riot.js!'
+  title: 'Hello Riot.js!',
 })

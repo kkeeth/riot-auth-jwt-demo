@@ -1,8 +1,5 @@
 <app>
-  <div class="app-header">
-    <img src="https://riot.js.org/img/logo/riot-logo.svg" alt="riot logo" class="logo">
-  </div>
-  <div class="container">
+    <div class="container">
     <router base={ base }>
       <route path="/">
         <div if={ isAuth }>
@@ -44,6 +41,7 @@
       },
       base: window.location.origin,
       onBeforeMount(props, state) {
+        this.isAuth = Cookie.get('auth')
         this.router.on.value(path => {
           if (path === '/') {
             this.isAuth = Cookie.get('auth')
@@ -53,7 +51,6 @@
       logout () {
         Cookie.remove('auth')
         this.router.push('/login')
-        // clear store(set null)
       }
     }
   </script>
