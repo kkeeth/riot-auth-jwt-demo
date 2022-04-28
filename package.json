@@ -1,7 +1,7 @@
 {
   "name": "riot-auth-jwt-demo",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "repository": "ssh://git@github.com/kkeeth/riot-auth-jwt-demo.git",
   "author": {
     "name": "kkeeth",
@@ -19,17 +19,17 @@
     "build": "parcel build index.html --out-dir=dist"
   },
   "devDependencies": {
-    "@riotjs/hot-reload": "^4.0.1",
-    "@riotjs/parcel-plugin-riot": "^4.0.1",
-    "commitizen": "^4.1.2",
-    "cz-conventional-changelog": "^3.2.0",
-    "parcel-bundler": "^1.12.4"
+    "@riotjs/hot-reload": "^6.0.0",
+    "@riotjs/parcel-plugin-riot": "^6.0.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "parcel-bundler": "^1.12.5"
   },
   "dependencies": {
-    "@riotjs/route": "^5.3.2",
-    "jose": "^1.27.1",
-    "js-cookie": "^2.2.1",
-    "riot": "^5.0.0"
+    "@riotjs/route": "^8.0.1",
+    "jose": "^4.8.0",
+    "js-cookie": "^3.0.1",
+    "riot": "^6.1.2"
   },
   "config": {
     "commitizen": {
